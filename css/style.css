@@ -1,0 +1,84 @@
+:root {
+    --bg: #40679E;
+    --primary: #FF407D;
+}
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    background-color: var(--bg);
+}
+
+/* navbar */
+.navbar {
+    background-color: var(--bg);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    border-bottom: 2px solid var(--primary);
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    color: whitesmoke;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: whitesmoke;
+    font-size: 1.4rem;
+    margin: 1.3rem;
+    display: inline-block;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.navbar .navbar-nav a::after {
+    display: block;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+    border-bottom: 0.1rem solid var(--primary);
+    content: '';
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+    color: whitesmoke;
+    padding: 0 1rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+
+#burgermenu {
+    display: none;
+}
